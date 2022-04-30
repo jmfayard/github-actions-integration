@@ -17,6 +17,7 @@ on:
       - 'path2'
   push:
     branches:
+      - 'main'
       - 'branch1'
       - 'branch2'
     tags:

@@ -5,6 +5,7 @@
 name: NodeJs Package
 
 on:
+  push:
   release:
     types:
       - 'created'
@@ -33,8 +34,3 @@ jobs:
       - id: step-2
         name: npm install
         run: npm install
-      - id: step-3
-        name: npm publish
-        env:
-          NODE_AUTH_TOKEN: $
-        run: npm publish

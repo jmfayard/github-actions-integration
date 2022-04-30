@@ -19,6 +19,7 @@ on:
     branches:
       - 'main'
     paths:
+      - '.github/**'
       - 'plugins/**'
       - 'sample-kotlin/**'
       - 'sample-groovy/**'
@@ -92,6 +93,8 @@ jobs:
         with:
           java-version: 11
           distribution: adopt
+      - id: symlinks
+        run: 'symlinks.sh'
       - id: step-3
         name: Check plugins and publish them to MavenLocal
         uses: gradle/gradle-build-action@v2

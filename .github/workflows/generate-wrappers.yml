@@ -6,7 +6,7 @@ name: Generate wrappers
 
 on:
   push:
-    branches-ignore:
+    branches:
       - 'main'
 
 jobs:
