@@ -21,7 +21,7 @@ jobs:
         run: sudo snap install --classic kotlin
       - id: step-2
         name: Consistency check
-        run: diff -u '.github/workflows/generate-wrappers.yaml' <('.github/workflows/generate-wrappers.main.kts')
+        run: diff -u '.github/workflows/some_workflow.yaml' <('.github/workflows/some_workflow.main.kts')
   "generate-wrappers":
     runs-on: "ubuntu-latest"
     steps:

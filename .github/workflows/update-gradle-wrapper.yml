@@ -23,7 +23,7 @@ jobs:
         run: sudo snap install --classic kotlin
       - id: step-2
         name: Consistency check
-        run: diff -u '.github/workflows/update-gradle-wrapper.yml' <('.github/workflows/update-gradle-wrapper.main.kts')
+        run: diff -u '.github/workflows/some_workflow.yaml' <('.github/workflows/some_workflow.main.kts')
   "update-gradle-wrapper":
     runs-on: "ubuntu-latest"
     steps:

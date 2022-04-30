@@ -99,14 +99,14 @@ jobs:
         with:
           arguments: check publishToMavenLocal --stacktrace
           build-root-directory: plugins
-          gradle-executable: plugins/gradlew
+          gradle-version: 6.5
       - id: step-4
         name: Run refreshVersions on sample-kotlin
         uses: gradle/gradle-build-action@v2
         with:
           arguments: refreshVersions --stacktrace
           build-root-directory: sample-kotlin
-          gradle-executable: sample-kotlin/gradlew
+          gradle-version: 6.5
         if: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.sample-kotlin == 'true' && github.event.inputs.run-refreshVersions-task == 'true' }}
       - id: step-5
         name: Check sample-kotlin
@@ -186,5 +186,5 @@ jobs:
         with:
           arguments: check --stacktrace
           build-root-directory: sample-android
-          gradle-executable: sample-android/gradlew
+          gradle-version: 6.5
         if: ${{ github.event.inputs.sample-android == 'true' }}

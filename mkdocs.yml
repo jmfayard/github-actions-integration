@@ -14,3 +14,7 @@ theme:
 
 nav:
   - 'Overview': index.md
+
+plugins:
+  - search
+  - markdownextradata: {}

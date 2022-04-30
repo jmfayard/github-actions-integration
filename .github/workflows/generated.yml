@@ -60,7 +60,7 @@ jobs:
         env:
           HELLO: ok
           PAT: rick
-        run: diff -u '.github/workflows/build.yaml' <('.github/workflows/build.main.kts')
+        run: diff -u '.github/workflows/some_workflow.yaml' <('.github/workflows/some_workflow.main.kts')
         if: true
   "build_for_UbuntuLatest":
     runs-on: "ubuntu-latest"
